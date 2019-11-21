@@ -40,13 +40,13 @@ export class LoginComponent implements OnInit {
         return;
       }
       if (this.user.email == this.loginForm.value.email && this.user.senha == this.loginForm.value.senha){
-        this.router.navigate(['/home'])
+        this.router.navigate(['/'])
       }
       if (this.user1.email == this.loginForm.value.email && this.user1.senha == this.loginForm.value.senha){
-        this.router.navigate(['/home'])
+        this.router.navigate(['/'])
       }
       if (this.user2.email == this.loginForm.value.email && this.user2.senha == this.loginForm.value.senha){
-        this.router.navigate(['/home'])
+        this.router.navigate(['/'])
       }
       
       this.credencialsCorrect = false

@@ -17,7 +17,6 @@ import { LoginComponent } from './login/login.component';
 import { CadastroImovelComponent } from './cadastro-imovel/cadastro-imovel.component';
 
 import { MessageService } from 'primeng/api';
-import { ImovelService } from './imovel.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +39,7 @@ import { ImovelService } from './imovel.service';
     ToastModule,
     SidebarModule,
   ],
-  providers: [MessageService, ImovelService],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
