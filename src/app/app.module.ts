@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { PanelModule } from 'primeng/panel';
@@ -25,11 +26,12 @@ import { MessageService } from 'primeng/api';
     CadastroImovelComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule,
-    HttpClientModule,
 
     PanelModule,
     TableModule,
