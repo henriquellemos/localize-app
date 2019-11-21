@@ -1,0 +1,55 @@
+<br>
+<p-panel header="Novo Imovel">
+  <div class="p-grid p-col-8">
+    <div class="p-col-2">Endereço</div>
+    <div class="p-col-10">
+      <input pInputText type="text" class="form-control" [(ngModel)]="imovel.endereco" placeholder="R. Alves">
+    </div>
+    <div class="p-col-2">Número</div>
+    <div class="p-col-10">
+      <input pInputText type="text" class="form-control" [(ngModel)]="imovel.numero" placeholder="1234" maxlength="6" (ngModelChange)="verificaNumero($event)">
+    </div>
+    <div class="p-col-2">Bairro</div>
+    <div class="p-col-10">
+      <input pInputText type="text" class="form-control" [(ngModel)]="imovel.bairro" placeholder="Copacabana">
+    </div>
+    <div class="p-col-2">Cidade</div>
+    <div class="p-col-10">
+      <input pInputText type="text" class="form-control" [(ngModel)]="imovel.cidade" placeholder="Rio de Janeiro">
+    </div>
+    <div class="p-col-2">Estado</div>
+    <div class="p-col-10">
+      <input pInputText type="text" [(ngModel)]="imovel.estado" placeholder="Rio de Janeiro">
+    </div>
+    <div class="p-col-2">Valor</div>
+    <div class="p-col-10">
+      <input pInputText type="text" [(ngModel)]="imovel.valor">
+    </div>
+    <div class="p-col-2">Status</div>
+    <div class="p-col-10">
+      <input pInputText type="text" [(ngModel)]="imovel.status">
+    </div>
+    <div class="p-col-2">Tipo do Imóvel</div>
+    <div class="p-col-10">
+      <select [(ngModel)]="imovel.tipoImovel">
+        <option value="CASA">CASA</option>
+        <option value="APARTAMENTO">APARTAMENTO</option>
+        <option value="GARAGEM">GARAGEM</option>
+      </select>
+    </div>
+
+    <div class="p-col-10 p-offset-2">
+      <button pButton type="submit" label="Save" class="ui-button-success" icon="pi pi-save" iconPos="left"
+        (click)="adicionar()"></button>
+    </div>
+  </div>
+</p-panel>
+<br>
+<div class="p-col-10 p-offset-2 ui-buttons">
+    <button pButton type="submit" label="Save" class="ui-button-success" icon="pi pi-plus" iconPos="left"
+      (click)="testar()"></button>
+  </div>
+<br>
+
+
+<p-toast></p-toast>
