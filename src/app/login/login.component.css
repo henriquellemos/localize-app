@@ -1,0 +1,27 @@
+.form-signin {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+}
+.invalid-user{
+    color: red;
+}
+form{
+    box-shadow: 1px 5px 15px 1px grey;
+}
+button {
+    background-color: #10BA54;
+    color: #fff;
+    border-color: #10BA54;
+}
+button:hover {
+    background-color: #fff;
+    color: #10BA54;
+    border-color: #10BA54;
+}
+button:active {
+    background-color: #fff !important;
+    color: #10BA54 !important;
+    border-color: #10BA54 !important;
+}

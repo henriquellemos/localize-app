@@ -1,1 +1,24 @@
-<p>login works!</p>
+<br><br><br><br>
+<form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="text-center mb-4">
+    <img class="mb-4" src="assets/imgs/logo_vr_ben_3D_1024x1024_rgb.png" alt="" width="72" height="72">
+  </div>
+  <div class="form-label-group form-group">
+      <label>Usuário</label>
+      <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">É necessario preencher o campo email.</div>
+          <div *ngIf="f.email.errors.email">O email precisa ser valido.</div>
+      </div>    
+  </div>
+  <div class="form-label-group form-group">      
+      <label>Senha</label>
+      <input type="password" formControlName="senha" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.senha.errors }" />
+      <div *ngIf="submitted && f.senha.errors" class="invalid-feedback">
+          <div *ngIf="f.senha.errors.required">É necessario preencher o campo senha.</div>
+          <div *ngIf="f.senha.errors.minlength">A senha não pode ter menos que cinco caracteres.</div>
+      </div>
+  </div>
+  <p *ngIf="!credencialsCorrect" class="invalid-user">Usuario ou senha incorreta.</p>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+</form>
