@@ -14,7 +14,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { CadastroImovelComponent } from './cadastro-imovel/cadastro-imovel.component';
+//import { CadastroImovelComponent } from './cadastro-imovel/cadastro-imovel.component';
 
 import { MessageService } from 'primeng/api';
 
@@ -22,7 +22,7 @@ import { MessageService } from 'primeng/api';
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastroImovelComponent
+    //CadastroImovelComponent
   ],
   imports: [
     BrowserModule,
