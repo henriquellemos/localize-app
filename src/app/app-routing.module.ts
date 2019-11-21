@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { CadastroImovelComponent } from './cadastro-imovel/cadastro-imovel.component';
+import { CadastroImovelComponent } from './cadastro/cadastro.component';
 
 
 const routes: Routes = [
