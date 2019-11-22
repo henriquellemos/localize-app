@@ -1,0 +1,10 @@
+<button pButton type="button" label="Menu" class="ui-button-secondary" icon="pi pi-bars"
+        (click)="visibleSidebar = true"></button>
+
+<p-sidebar [(visible)]="visibleSidebar" [fullScreen]="false" [baseZIndex]="10000">
+    <h1 style="font-weight:normal">Menu -</h1>
+    <button pButton type="button" routerLink="/buscar-item" routerLinkActive="active" label="Procurar item" class="ui-button-secondary"></button>
+    <br>
+    <br>
+    <button pButton type="button" (click)="visibleSidebar = false" label="Cadastrar novo item" class="ui-button-secondary"></button>
+</p-sidebar>

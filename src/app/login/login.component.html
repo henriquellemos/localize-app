@@ -1,9 +1,6 @@
 <br><br><br><br>
 <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <div class="text-center mb-4">
-    <img class="mb-4" src="assets/imgs/logo_vr_ben_3D_1024x1024_rgb.png" alt="" width="72" height="72">
-  </div>
-  <div class="form-label-group form-group">
+    <div class="form-label-group form-group">
       <label>Usuário</label>
       <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
       <div *ngIf="submitted && f.email.errors" class="invalid-feedback">

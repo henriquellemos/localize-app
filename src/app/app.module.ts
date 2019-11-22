@@ -18,12 +18,16 @@ import { LoginComponent } from './login/login.component';
 import { CadastroImovelComponent } from './cadastro/cadastro.component';
 
 import { MessageService } from 'primeng/api';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
+import { BuscarItemComponent } from './buscar-item/buscar-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastroImovelComponent
+    CadastroImovelComponent,
+    LeftMenuComponent,
+    BuscarItemComponent
   ],
   imports: [
     BrowserAnimationsModule,

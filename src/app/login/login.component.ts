@@ -32,21 +32,19 @@ export class LoginComponent implements OnInit {
       senha: ['', [Validators.required, Validators.minLength(2)]]
     });
   }
-  // convenience getter for easy access to form fields
   get f() { return this.loginForm.controls; }
   onSubmit() {
-      // stop here if form is invalid
       if (this.loginForm.invalid) {
         return;
       }
       if (this.user.email == this.loginForm.value.email && this.user.senha == this.loginForm.value.senha){
-        this.router.navigate(['/'])
+        this.router.navigate(['/home'])
       }
       if (this.user1.email == this.loginForm.value.email && this.user1.senha == this.loginForm.value.senha){
-        this.router.navigate(['/'])
+        this.router.navigate(['/home'])
       }
       if (this.user2.email == this.loginForm.value.email && this.user2.senha == this.loginForm.value.senha){
-        this.router.navigate(['/'])
+        this.router.navigate(['/home'])
       }
       
       this.credencialsCorrect = false
