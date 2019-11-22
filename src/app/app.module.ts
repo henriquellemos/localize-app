@@ -20,6 +20,7 @@ import { CadastroImovelComponent } from './cadastro/cadastro.component';
 import { MessageService } from 'primeng/api';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { BuscarItemComponent } from './buscar-item/buscar-item.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BuscarItemComponent } from './buscar-item/buscar-item.component';
     LoginComponent,
     CadastroImovelComponent,
     LeftMenuComponent,
-    BuscarItemComponent
+    BuscarItemComponent,
+    HomeComponent
   ],
   imports: [
     BrowserAnimationsModule,

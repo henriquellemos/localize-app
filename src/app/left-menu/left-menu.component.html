@@ -2,9 +2,9 @@
         (click)="visibleSidebar = true"></button>
 
 <p-sidebar [(visible)]="visibleSidebar" [fullScreen]="false" [baseZIndex]="10000">
-    <h1 style="font-weight:normal">Menu -</h1>
+    <h1 style="font-weight:normal">Menu</h1><br>
     <button pButton type="button" routerLink="/buscar-item" routerLinkActive="active" label="Procurar item" class="ui-button-secondary"></button>
     <br>
     <br>
-    <button pButton type="button" (click)="visibleSidebar = false" label="Cadastrar novo item" class="ui-button-secondary"></button>
+    <button pButton type="button" routerLink="/cadastro-imovel" routerLinkActive="active" label="Cadastrar novo item" class="ui-button-secondary"></button>
 </p-sidebar>
