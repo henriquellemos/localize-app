@@ -9,17 +9,17 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   submitted = false
   credencialsCorrect = true;
-  user = {
+  userMock0 = {
     email:'henrique@ufu.br',
     senha:'123123'
   }
 
-  user1 = {
+  userMock1 = {
     email:'larissa@ufu.br',
     senha:'123123'
   }
 
-  user2 = {
+  userMock2 = {
     email:'israel@ufu.br',
     senha:'123123'
   }
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required]],
-      senha: ['', [Validators.required, Validators.minLength(2)]]
+      senha: ['', [Validators.required]]
     });
   }
   get f() { return this.loginForm.controls; }
@@ -37,13 +37,9 @@ export class LoginComponent implements OnInit {
       if (this.loginForm.invalid) {
         return;
       }
-      if (this.user.email == this.loginForm.value.email && this.user.senha == this.loginForm.value.senha){
-        this.router.navigate(['/home'])
-      }
-      if (this.user1.email == this.loginForm.value.email && this.user1.senha == this.loginForm.value.senha){
-        this.router.navigate(['/home'])
-      }
-      if (this.user2.email == this.loginForm.value.email && this.user2.senha == this.loginForm.value.senha){
+      if (this.userMock0.email == this.loginForm.value.email && this.userMock0.senha == this.loginForm.value.senha
+        || this.userMock1.email == this.loginForm.value.email && this.userMock1.senha == this.loginForm.value.senha
+        || this.userMock2.email == this.loginForm.value.email && this.userMock2.senha == this.loginForm.value.senha){
         this.router.navigate(['/home'])
       }
       
