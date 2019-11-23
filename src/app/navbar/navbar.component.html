@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <a href="javascript:;" id="navbar-icon" (click)="exibindoMenu = !exibindoMenu"><i class="pi pi-bars"></i></a>
+            </div>        
+        </div>
+    </div>
+
+    <ul class="navbar-menu" [hidden]="!exibindoMenu">
+        <li class="navbar-user">Henrique Lemos</li>
+        <li class="navbar-menu-item"><a routerLink="/cadastro-imovel">Cadastrar Item</a></li>
+        <li class="navbar-menu-item"><a routerLink="/buscar">Buscar Item</a></li>
+        <li class="navbar-menu-item"><a routerLink="/login">Logout</a></li>
+    </ul>
+</nav>

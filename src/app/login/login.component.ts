@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     });
   }
   get f() { return this.loginForm.controls; }
-  onSubmit() {
+    onSubmit() {
       if (this.loginForm.invalid) {
         return;
       }
