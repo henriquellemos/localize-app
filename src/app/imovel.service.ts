@@ -19,15 +19,8 @@ export class ImovelService {
     return this.httpClient.post(`${this.imovelUrl}/salvar`, imovel);
   }
 
-  buscaImovel(imovel: any) {
-    if(imovel.valorMin == null && imovel.valorMax != null && imovel.cidade == null){
-      return this.httpClient.get(`${this.imovelUrl}/buscar?valorMax=${imovel.valorMax}`, imovel);
-    }
-    if(imovel.valorMax == null && imovel.cidade != null && imovel.valorMin != null){
-      return this.httpClient.get(`${this.imovelUrl}/buscar?cidade=${imovel.cidade}&valorMin=${imovel.valorMin}`, imovel);
-    }
-    
-    return this.httpClient.get(`${this.imovelUrl}/buscar?valorMin=${imovel.valorMin}&valorMax=${imovel.valorMax}`, imovel);
+  buscaImovel(imovel: any) {    
+    return this.httpClient.get(`${this.imovelUrl}/buscar?valorMin=${imovel.valorMin}&valorMax=${imovel.valorMax}&endereco=${imovel.endereco}&bairro=${imovel.bairro}&cidade=${imovel.cidade}&estado=${imovel.estado}&tipoItem=${imovel.tipoItem}`, imovel);
   }
 
 }
