@@ -6,17 +6,28 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ImovelService {
 
-  apiUrlListar = 'https://localize-app-backend.herokuapp.com/imovel/listar';
-  apiUrlSalvar = 'https://localize-app-backend.herokuapp.com/imovel/salvar';
+  //imovelUrl = 'https://localize-app-backend.herokuapp.com/imovel';
+  imovelUrl = 'http://localhost:8080/imovel';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   listar(){
-    return this.httpClient.get(this.apiUrlListar);
+    return this.httpClient.get(`${this.imovelUrl}/listar`);
   }
 
   adicionar(imovel: any) {
-    return this.httpClient.post(this.apiUrlSalvar, imovel);
+    return this.httpClient.post(`${this.imovelUrl}/salvar`, imovel);
+  }
+
+  buscaImovel(imovel: any) {
+    if(imovel.valorMin == null && imovel.valorMax != null && imovel.cidade == null){
+      return this.httpClient.get(`${this.imovelUrl}/buscar?valorMax=${imovel.valorMax}`, imovel);
+    }
+    if(imovel.valorMax == null && imovel.cidade != null && imovel.valorMin != null){
+      return this.httpClient.get(`${this.imovelUrl}/buscar?cidade=${imovel.cidade}&valorMin=${imovel.valorMin}`, imovel);
+    }
+    
+    return this.httpClient.get(`${this.imovelUrl}/buscar?valorMin=${imovel.valorMin}&valorMax=${imovel.valorMax}`, imovel);
   }
 
 }

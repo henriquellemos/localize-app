@@ -8,9 +8,11 @@ import { PanelModule } from 'primeng/panel';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { SelectButtonModule } from 'primeng/selectbutton';
 import { CarouselModule } from 'primeng/carousel';
 import { ToastModule } from 'primeng/toast';
 import { SidebarModule } from 'primeng/sidebar';
+import { PaginatorModule } from 'primeng/primeng';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +23,8 @@ import { MessageService } from 'primeng/api';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { BuscarItemComponent } from './buscar-item/buscar-item.component';
 import { HomeComponent } from './home/home.component';
+import { BuscaComponent } from './busca/busca.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { HomeComponent } from './home/home.component';
     CadastroImovelComponent,
     LeftMenuComponent,
     BuscarItemComponent,
-    HomeComponent
+    HomeComponent,
+    BuscaComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -38,11 +43,13 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    PaginatorModule,
 
     PanelModule,
     TableModule,
     InputTextModule,
     ButtonModule,
+    SelectButtonModule,
     CarouselModule,
     ToastModule,
     SidebarModule,

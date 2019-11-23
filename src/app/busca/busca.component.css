@@ -1,0 +1,19 @@
+.Disponivel {
+    color: rgb(3, 214, 3);
+}
+
+.Alugado {
+    color: rgb(167, 167, 0);
+}
+
+.Vendido {
+    color: red;
+}
+
+.botaoAlugar {
+    cursor: pointer;
+}
+
+tr {
+    text-align: center;
+}

@@ -24,20 +24,24 @@
   <ng-template let-imovel pTemplate="item">
     <div class="ui-grid ui-grid-responsive">
       <div class="ui-grid-row">
-        <div class="ui-grid-col-6">Tipo Imovel</div>
+        <div class="ui-grid-col-6">Tipo Imóvel</div>
         <div class="ui-grid-col-6">{{imovel.tipoImovel}}</div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-6">Endereço</div>
+        <div class="ui-grid-col-6">{{imovel.endereco}}</div>
       </div>
       <div class="ui-grid-row">
         <div class="ui-grid-col-6">Cidade</div>
         <div class="ui-grid-col-6">{{imovel.cidade}}</div>
       </div>
       <div class="ui-grid-row">
-        <div class="ui-grid-col-6">Valor</div>
-        <div class="ui-grid-col-6">{{imovel.valor}}</div>
-      </div>
-      <div class="ui-grid-row">
         <div class="ui-grid-col-6">Status</div>
         <div class="ui-grid-col-6">{{imovel.status}}</div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-6">Valor</div>
+        <div class="ui-grid-col-6">{{imovel.valor}}</div>
       </div>
     </div>
   </ng-template>
