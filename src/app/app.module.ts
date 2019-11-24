@@ -20,8 +20,6 @@ import { LoginComponent } from './login/login.component';
 import { CadastroImovelComponent } from './cadastro/cadastro.component';
 
 import { MessageService } from 'primeng/api';
-import { LeftMenuComponent } from './left-menu/left-menu.component';
-import { BuscarItemComponent } from './buscar-item/buscar-item.component';
 import { HomeComponent } from './home/home.component';
 import { BuscaComponent } from './busca/busca.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -32,8 +30,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     LoginComponent,
     CadastroImovelComponent,
-    LeftMenuComponent,
-    BuscarItemComponent,
     HomeComponent,
     BuscaComponent,
     NavbarComponent
