@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ImovelService {
 
-  //imovelUrl = 'https://localize-app-backend.herokuapp.com/imovel';
-  imovelUrl = 'http://localhost:8080/imovel';
+  imovelUrl = 'https://localize-app-backend.herokuapp.com/imovel';
+  //imovelUrl = 'http://localhost:8080/imovel';
 
   constructor(private httpClient: HttpClient) {}
 
