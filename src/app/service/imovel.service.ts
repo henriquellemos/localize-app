@@ -19,7 +19,7 @@ export class ImovelService {
   }
 
   buscaImovel(imovel: any) {    
-    return this.httpClient.get(`${this.imovelUrl}/buscar?valorMin=${imovel.valorMin}&valorMax=${imovel.valorMax}&endereco=${imovel.endereco}&bairro=${imovel.bairro}&cidade=${imovel.cidade}&estado=${imovel.estado}&tipoItem=${imovel.tipoItem}`, imovel);
+    return this.httpClient.get(`${this.imovelUrl}/buscar?valorMin=${imovel.valorMin}&valorMax=${imovel.valorMax}&endereco=${imovel.endereco}&bairro=${imovel.bairro}&cidade=${imovel.cidade}&estado=${imovel.estado}&tipo=${imovel.tipo}`, imovel);
   }
 
 }

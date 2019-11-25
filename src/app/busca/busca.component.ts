@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { ImovelService } from "../imovel.service";
+import { ImovelService } from "../service/imovel.service";
+import { EmailService } from "../service/email.service";
 import { SelectItem } from "primeng/api";
 
 @Component({
@@ -14,6 +15,10 @@ export class BuscaComponent implements OnInit {
   selectedType: string;
 
   imoveis = [];
+
+  statusAuxiliar: string;
+
+  email: string = "henriquellemos@gmail.com";
 
   endereco: String;
   bairro: String;
@@ -33,7 +38,7 @@ export class BuscaComponent implements OnInit {
     tipo: this.selectedType
   };
 
-  constructor(private imovelService: ImovelService, public router: Router) {
+  constructor(private imovelService: ImovelService, private emailService: EmailService, public router: Router) {
     this.types = [
       { label: "Casa", value: "CASA" },
       { label: "Apartamento", value: "APARTAMENTO" },
@@ -43,6 +48,10 @@ export class BuscaComponent implements OnInit {
 
   ngOnInit() {}
 
+  selecionarTipo(type){
+    console.log(type);
+    this.imovel.tipo = type.value;
+  }
   consultar() {
     this.imovelService
       .listar()
@@ -73,6 +82,21 @@ export class BuscaComponent implements OnInit {
     }
     this.imovelService
       .buscaImovel(this.imovel)
+      .subscribe(response => {
+        this.imoveis = <any>response;
+      }), err => {
+        console.log(err);
+      }
+  }
+
+  emAnalise(imovel) {
+    if(imovel.status == "Disponivel"){      
+      imovel.status = "Em analise"
+      this.statusAuxiliar = "Em análise"
+    }
+    this.emailService
+      .enviarEmail(this.email, imovel)
       .subscribe(response => (this.imoveis = <any>response));
+    
   }
 }

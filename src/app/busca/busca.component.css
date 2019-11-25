@@ -25,3 +25,33 @@ h1 {
 .container {
     background-color: rgb(238, 238, 238);
 }
+
+.statusAuxiliar {
+    background-color: rgb(212, 252, 200) !important;
+    color: black;
+    font-weight: bold;
+}
+
+.selectTipo {
+    padding: 0;
+    text-align: center;
+}
+
+p {
+    margin-block-start: 1em;
+}
+
+.tipoItem {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.itemSelecionado {
+    margin-block-start: 7px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+#button-pesquisar {
+    margin-left: 17px;
+}

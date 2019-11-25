@@ -29,9 +29,13 @@
     </div>
 
     <div class="ui-g-12 ui-fluid">
-      <div class="ui-g-6 ui-fluid">
-        <label>Tipo Item</label>
-        <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+      <div  class="ui-g-6 ui-fluid">
+        <p class="tipoItem">Tipo Item</p>
+        <p-selectButton [options]="types" [(ngModel)]="selectedType" class="selectTipo">
+          <ng-template let-type>
+            <p class="itemSelecionado" (click)="selecionarTipo(type)">{{type.label}}</p>
+        </ng-template>
+        </p-selectButton>
       </div>
       <div class="ui-g-6 ui-fluid">
         <label style="display: block">Valor</label>
@@ -41,7 +45,7 @@
       </div>
     </div>
 
-    <div class="ui-g-2 ui-fluid">
+    <div id="button-pesquisar" class="ui-g-2 ui-fluid">
       <button pButton type="submit" label="Pesquisar" (click)="buscar()"></button>
     </div>
 
@@ -69,8 +73,9 @@
             <td>{{ imovel.cidade }}</td>
             <td>{{ imovel.estado }}</td>
             <td>{{ imovel.valor }}</td>
-            <td class="{{imovel.status}}">{{ imovel.status }}</td>
-            <td text-align="center"><a class="botaoAlugar" pTooltip="Alugar" tooltipPosition="top"><i class="pi pi-key botaoAlugar"></i></a></td>
+            <td *ngIf="imovel.status === 'Em analise'" class="statusAuxiliar">{{ statusAuxiliar }}</td>
+            <td *ngIf="imovel.status !== 'Em analise'" class="{{imovel.status}}">{{ imovel.status }}</td>
+            <td text-align="center"><a class="botaoAlugar" pTooltip="Alugar" tooltipPosition="top" (click)="emAnalise(imovel)"><i class="pi pi-key botaoAlugar"></i></a></td>
           </tr>
         </ng-template>
       </p-table>

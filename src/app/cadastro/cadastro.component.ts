@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ImovelService } from '../imovel.service';
+import { ImovelService } from '../service/imovel.service';
 import { MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
 @Component({
@@ -19,7 +19,7 @@ export class CadastroImovelComponent implements OnInit {
   estadoAuxiliar: string;
   valorAuxiliar: number;
   statusAuxiliar: string;
-  tipoImovelAuxiliar: [];
+  tipoAuxiliar: [];
 
   imovel = {
     endereco: this.enderecoAuxiliar,
@@ -29,7 +29,7 @@ export class CadastroImovelComponent implements OnInit {
     estado: this.estadoAuxiliar,
     valor: this.valorAuxiliar,
     status: this.statusAuxiliar,
-    tipoImovel: this.tipoImovelAuxiliar
+    tipo: this.tipoAuxiliar
   };
 
   constructor(
@@ -52,7 +52,7 @@ export class CadastroImovelComponent implements OnInit {
           estado: this.estadoAuxiliar,
           valor: this.valorAuxiliar,
           status: this.statusAuxiliar,
-          tipoImovel: this.tipoImovelAuxiliar
+          tipo: this.tipoAuxiliar
         };
 
         this.messageService.add({
@@ -72,14 +72,6 @@ export class CadastroImovelComponent implements OnInit {
             summary: msg
           });
         });
-  }
-
-  testar() {
-    this.messageService.clear()
-    this.messageService.add({
-      severity: 'success',
-      summary: 'Oportunidade adicionada com sucesso'
-    });
   }
 
   verificaNumero(event) {
