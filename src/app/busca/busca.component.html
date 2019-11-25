@@ -41,12 +41,17 @@
         <label style="display: block">Valor</label>
         <input pInputText type="text" style="width: 95px" [(ngModel)]="imovel.valorMin">
         &nbsp;<label>até</label>&nbsp;
-        <input pInputText type="text" style="width: 95px" [(ngModel)]="imovel.valorMax">
+        <input pInputText type="text" style="width: 95px" value="{{imovel.valorMax}}" [(ngModel)]="imovel.valorMax">
       </div>
     </div>
 
-    <div id="button-pesquisar" class="ui-g-2 ui-fluid">
-      <button pButton type="submit" label="Pesquisar" (click)="buscar()"></button>
+    <div class="ui-g-12 ui-fluid">
+      <div id="button-pesquisar" class="ui-g-6 ui-fluid otario-do-coxe">
+        <button pButton type="submit" label="Pesquisar" (click)="buscar()"></button>
+      </div>
+      <div class="ui-g-6 ui-fluid otario-do-coxe">
+        <button pButton type="submit" class="ui-button-danger" label="Limpar" (click)="limpar()"></button>
+      </div>
     </div>
 
   </div>

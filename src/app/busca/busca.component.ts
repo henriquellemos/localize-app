@@ -24,13 +24,13 @@ export class BuscaComponent implements OnInit {
   bairro: String;
   cidade: String;
   estado:String;
-  valorMinAux: Number;
-  valorMaxAux: Number;
+  valorMin: Number;
+  valorMax: Number;
   tipo: String;
 
   imovel = {
-    valorMin: this.valorMinAux,
-    valorMax: this.valorMaxAux,
+    valorMin: this.valorMin,
+    valorMax: this.valorMax,
     endereco: this.endereco,
     bairro: this.bairro,
     cidade: this.cidade,
@@ -47,6 +47,16 @@ export class BuscaComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  limpar(){
+    this.imovel.endereco = null;
+    this.imovel.bairro = null;
+    this.imovel.cidade = null;
+    this.imovel.estado = null;
+    this.imovel.valorMin = null;
+    this.imovel.valorMax = null;
+    this.imovel.tipo = null;
+  }
 
   selecionarTipo(type){
     console.log(type);
