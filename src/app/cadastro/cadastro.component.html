@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <br>
-<p-panel header="Novo Imovel">
+<p-panel header="Cadastro Item">
   <div class="p-grid p-col-8">
     <div class="p-col-2">Endereço</div>
     <div class="p-col-10">
@@ -24,15 +24,11 @@
     </div>
     <div class="p-col-2">Valor</div>
     <div class="p-col-10">
-      <input pInputText type="text" [(ngModel)]="imovel.valor">
-    </div>
-    <div class="p-col-2">Status</div>
-    <div class="p-col-10">
-      <input pInputText type="text" [(ngModel)]="imovel.status">
+      <input pInputText type="text" [(ngModel)]="imovel.valor" placeholder="0,00">
     </div>
     <div class="p-col-2">Tipo do Imóvel</div>
     <div class="p-col-10">
-      <select [(ngModel)]="imovel.tipo">
+      <select [(ngModel)]="imovel.tipo" class="select-tipo">
         <option value="CASA">CASA</option>
         <option value="APARTAMENTO">APARTAMENTO</option>
         <option value="GARAGEM">GARAGEM</option>

@@ -28,7 +28,7 @@ export class CadastroImovelComponent implements OnInit {
     cidade: this.cidadeAuxiliar,
     estado: this.estadoAuxiliar,
     valor: this.valorAuxiliar,
-    status: this.statusAuxiliar,
+    status: "Disponivel",
     tipo: this.tipoAuxiliar
   };
 
@@ -51,7 +51,7 @@ export class CadastroImovelComponent implements OnInit {
           cidade: this.cidadeAuxiliar,
           estado: this.estadoAuxiliar,
           valor: this.valorAuxiliar,
-          status: this.statusAuxiliar,
+          status: "Disponivel",
           tipo: this.tipoAuxiliar
         };
 

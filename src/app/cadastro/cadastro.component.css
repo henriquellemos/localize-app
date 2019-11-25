@@ -1,0 +1,8 @@
+::placeholder {
+    opacity: 0.6;
+}
+
+.select-tipo {
+    padding: 5px 23px;
+    border-radius: 3px;
+}
