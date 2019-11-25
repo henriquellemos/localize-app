@@ -12,6 +12,8 @@ import { SelectItem } from "primeng/api";
 export class BuscaComponent implements OnInit {
   types: SelectItem[];
 
+  responsePreenchido: boolean;
+
   selectedType: string;
 
   imoveis = [];
@@ -94,9 +96,16 @@ export class BuscaComponent implements OnInit {
       .buscaImovel(this.imovel)
       .subscribe(response => {
         this.imoveis = <any>response;
+        if(this.imoveis.length <= 0){
+          this.responsePreenchido = false;
+        } else {
+          this.responsePreenchido = true;
+        }
       }), err => {
         console.log(err);
       }
+
+    this.limpar()
   }
 
   emAnalise(imovel) {

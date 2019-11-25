@@ -57,7 +57,12 @@
   </div>
 
   <div class="ui-g">
-    <div class="ui-g-12">
+
+    <div class="ui-g-12" *ngIf="!responsePreenchido">
+      <p>Não encontramos registros.</p>
+    </div>
+
+    <div class="ui-g-12" *ngIf="responsePreenchido">
       <p-table [value]="imoveis" [paginator]="true" [rows]="5"
           [responsive]="true">
         <ng-template pTemplate="header">
